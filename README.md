@@ -59,21 +59,90 @@ Now that you have successfully run the app, let's modify it.
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+<br />
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+# Mama Recipe Mobile Application
 
-# Troubleshooting
+Mama Recipe is a mobile application used to share information about food recipes and browse food recipes from other users. The website comes with features for adding recipes, viewing recipes from other users, and viewing cooking video tutorials.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+<br />
 
-# Learn More
+## Features
 
-To learn more about React Native, take a look at the following resources:
+- Users can add recipes, and video cooking tutorial, and also view video from other users.
+- Users can edit their profile.
+- Users can edit or delete their existing recipes.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+<br />
+
+## Built With
+
+- React Native
+- Redux
+
+<br />
+
+## Package dependencies
+
+- axios
+- native-base
+- react-native
+- react-native-dotenv
+- react-native-image-picker
+- react-native-onesignal
+- react-native-safe-area-context
+- react-native-screens
+- react-native-svg
+- async-storage
+
+<br />
+
+## Environment Variables
+
+bash
+API_KEY=
+ONESIGNAL_API_ID=
+
+<br />
+
+## Installation
+
+Clone the project
+
+bash
+  git clone https://github.com/HizkiaP/MamaRecipe_Mobile.git my-project
+
+
+Go to the project directory
+
+bash
+  cd my-project
+
+
+Install dependencies
+
+bash
+  npm install
+
+
+Start the project
+
+bash
+  npm start
+
+<br />
+
+## Screenshot
+
+<br />
+
+## Authors
+
+💻 [Hizkia Panjaitan](https://github.com/HizkiaP) as Fullstack Developer
+
+<br />
+
+## Related Project
+
+⚡[Mama Recipe Web App](https://github.com/HizkiaP/MamaRecipe_FrontEnd)⚡
+
