@@ -143,7 +143,7 @@ bash
 
 | Profile Page | Edit Page |
 |------------|---------------|
-|![Profile Page](https://drive.google.com/uc?export=view&id=1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX) | ![Edit Page](https://drive.google.com/uc?export=view&id=195F1YR9WZAG2V335si38mIzjqjOFML5g)|
+|![Profile Page](https://drive.google.com/uc?export=view&id=1Klg9t-vQLOcC2Y9rkcYIcZQQgsnPh_Ns) | ![Edit Page](https://drive.google.com/uc?export=view&id=195F1YR9WZAG2V335si38mIzjqjOFML5g)|
 
 | Video Step Page | Ingredients Page |
 |------------|---------------|
@@ -151,7 +151,7 @@ bash
 
 | Add Recipe Page |
 |------------|
-|![Add Recipe Page](https://drive.google.com/uc?export=view&id=1aAOsx93o0kehBL5qDXjKyDXL1ilwdD)|
+|![Add Recipe Page](https://drive.google.com/uc?export=view&id=1aAOsx93o0kehBL5qDXjKyDXL1ilwdD-_)|
 
 <br />
 
