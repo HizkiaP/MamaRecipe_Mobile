@@ -135,23 +135,23 @@ bash
 ## Screenshot
 | Login Page | Register Page |
 |------------|---------------|
-|![Login Page](https://drive.google.com/uc?export=view&id=1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f) | ![Register Page](https://drive.google.com/file/d/1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84/view?usp=sharing)|
+|![Login Page](https://drive.google.com/uc?export=view&id=1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f) | ![Register Page](https://drive.google.com/uc?export=view&id=1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84)|
 
 | Home Page | Search Page |
 |------------|---------------|
-|![Home Page](https://drive.google.com/file/d/1dav4BE0l1L_uUsQlQjZj_MFw1iQHiNy7/view?usp=sharing) | ![Search Page](https://drive.google.com/file/d/1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX/view?usp=sharing)|
+|![Home Page](https://drive.google.com/uc?export=view&id=1dav4BE0l1L_uUsQlQjZj_MFw1iQHiNy7) | ![Search Page](https://drive.google.com/uc?export=view&id=1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX)|
 
 | Profile Page | Edit Page |
 |------------|---------------|
-|![Profile Page](https://drive.google.com/file/d/1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX/view?usp=sharing) | ![Edit Page](https://drive.google.com/file/d/195F1YR9WZAG2V335si38mIzjqjOFML5g/view?usp=sharing)|
+|![Profile Page](https://drive.google.com/uc?export=view&id=1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX) | ![Edit Page](https://drive.google.com/uc?export=view&id=195F1YR9WZAG2V335si38mIzjqjOFML5g)|
 
 | Video Step Page | Ingredients Page |
 |------------|---------------|
-|![Video Step Page](https://drive.google.com/file/d/1DL6mjIBl32QEiDUrnIVpTZ4qZjXAK5b4/view?usp=sharing) | ![Ingredients Page](https://drive.google.com/file/d/1RoH-FrZ2wn6e9cZqbC_r7waNGfBdJ6aR/view?usp=sharing)|
+|![Video Step Page](https://drive.google.com/uc?export=view&id=1DL6mjIBl32QEiDUrnIVpTZ4qZjXAK5b4) | ![Ingredients Page](https://drive.google.com/uc?export=view&id=1RoH-FrZ2wn6e9cZqbC_r7waNGfBdJ6aR)|
 
 | Add Recipe Page |
 |------------|
-|![Add Recipe Page](https://drive.google.com/file/d/1aAOsx93o0kehBL5qDXjKyDXL1ilwdD-_/view?usp=sharing)|
+|![Add Recipe Page](https://drive.google.com/uc?export=view&id=1aAOsx93o0kehBL5qDXjKyDXL1ilwdD)|
 
 <br />
 
