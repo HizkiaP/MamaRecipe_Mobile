@@ -78,7 +78,6 @@ Mama Recipe is a mobile application used to share information about food recipes
 ## Built With
 
 - React Native
-- Redux
 
 <br />
 
