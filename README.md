@@ -135,7 +135,7 @@ bash
 ## Screenshot
 | Login Page | Register Page |
 |------------|---------------|
-|![Login Page](https://drive.google.com/file/d/1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f/view?usp=drive_link) | ![Register Page](https://drive.google.com/file/d/1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84/view?usp=sharing)|
+|![Login Page](https://drive.google.com/uc?export=view&id=1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f) | ![Register Page](https://drive.google.com/file/d/1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84/view?usp=sharing)|
 
 | Home Page | Search Page |
 |------------|---------------|
