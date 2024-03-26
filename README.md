@@ -63,7 +63,7 @@ You've successfully run and modified your React Native App. :partying_face:
 
 # Mama Recipe Mobile Application
 
-Mama Recipe is a mobile application used to share information about food recipes and browse food recipes from other users. The website comes with features for adding recipes, viewing recipes from other users, and viewing cooking video tutorials.
+Mama Recipe is a mobile application used to share information about food recipes and browse food recipes from other users. The website comes with features for adding recipes, viewing recipes from other users, and viewing cooking video tutorials. This website is also equipped with notifications of new recipes uploaded by other users and can upload images from storage or the user's camera.
 
 <br />
 
@@ -72,6 +72,8 @@ Mama Recipe is a mobile application used to share information about food recipes
 - Users can add recipes, and video cooking tutorial, and also view video from other users.
 - Users can edit their profile.
 - Users can edit or delete their existing recipes.
+- Users get a notification of new recipes from other users
+- Users can upload images from their storage or take picture from camera
 
 <br />
 
