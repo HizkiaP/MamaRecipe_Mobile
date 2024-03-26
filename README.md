@@ -136,23 +136,23 @@ bash
 ## Screenshot
 | Login Page | Register Page |
 |------------|---------------|
-|![Login Page](https://drive.google.com/uc?export=view&id=1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f) | ![Register Page](https://drive.google.com/uc?export=view&id=1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84)|
+|<img src="https://drive.google.com/uc?export=view&id=1klDU4AbkwK1GUgKJhozQQnl_ML3JDB1f" width=400/> | <img src="https://drive.google.com/uc?export=view&id=1uUdrutecGDyJ5K8YRSU8Tdl1hIVtZQ84" width=400/>|
 
 | Home Page | Search Page |
 |------------|---------------|
-|![Home Page](https://drive.google.com/uc?export=view&id=1dav4BE0l1L_uUsQlQjZj_MFw1iQHiNy7) | ![Search Page](https://drive.google.com/uc?export=view&id=1yb7VUL8wZb8NKIdkUPVQhKrI4fGQ74ZX)|
+|<img src="https://drive.google.com/uc?export=view&id=1dav4BE0l1L_uUsQlQjZj_MFw1iQHiNy7" width=400/> | <img src="https://drive.google.com/uc?export=view&id=1wsXkptEiIa9j-qRK_JE4BZRfhA1_cb1n" width=400/>|
 
 | Profile Page | Edit Page |
 |------------|---------------|
-|![Profile Page](https://drive.google.com/uc?export=view&id=1Klg9t-vQLOcC2Y9rkcYIcZQQgsnPh_Ns) | ![Edit Page](https://drive.google.com/uc?export=view&id=195F1YR9WZAG2V335si38mIzjqjOFML5g)|
+|<img src="https://drive.google.com/uc?export=view&id=1Klg9t-vQLOcC2Y9rkcYIcZQQgsnPh_Ns" width=400/> | <img src="https://drive.google.com/uc?export=view&id=195F1YR9WZAG2V335si38mIzjqjOFML5g" width=400/>|
 
 | Video Step Page | Ingredients Page |
 |------------|---------------|
-|![Video Step Page](https://drive.google.com/uc?export=view&id=1DL6mjIBl32QEiDUrnIVpTZ4qZjXAK5b4) | ![Ingredients Page](https://drive.google.com/uc?export=view&id=1RoH-FrZ2wn6e9cZqbC_r7waNGfBdJ6aR)|
+|<img src="https://drive.google.com/uc?export=view&id=1qMSkqSbOe-lJh_xXc73N3RS3Xhr5fPdz" width=400/> | <img src="https://drive.google.com/uc?export=view&id=1IOb591wdjLY2ci30ZjrYjjm_kkNs59-r" width=400/>|
 
-| Add Recipe Page |
-|------------|
-|![Add Recipe Page](https://drive.google.com/uc?export=view&id=1aAOsx93o0kehBL5qDXjKyDXL1ilwdD-_)|
+| Add Recipe Page | Detail Video Page |
+|------------| ---------------|
+|<img src="https://drive.google.com/uc?export=view&id=1aAOsx93o0kehBL5qDXjKyDXL1ilwdD-_" width=400/>| <img src="https://drive.google.com/uc?export=view&id=1OnU2oVUa2AgPjlqPl0RfMMZnrmXNMJUs" width=400/>|
 
 <br />
 
@@ -163,6 +163,8 @@ bash
 <br />
 
 ## Related Project
+
+⚡[Backend Mama Recipe](https://github.com/HizkiaP/Intermediate_Backend-Kia)⚡
 
 ⚡[Mama Recipe Web App](https://github.com/HizkiaP/MamaRecipe_FrontEnd)⚡
 
