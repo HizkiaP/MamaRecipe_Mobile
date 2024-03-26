@@ -156,9 +156,15 @@ bash
 
 <br />
 
+## Demo
+
+[Mama Recipe Mobile](https://github.com/HizkiaP)
+
+<br />
+
 ## Authors
 
-💻 [Hizkia Panjaitan](https://github.com/HizkiaP) as Fullstack Developer
+💻 [Hizkia Panjaitan](https://drive.google.com/drive/folders/1jJlgpB8R-bI1-90syE67FQCFbxiGhC1F?usp=sharing) as Fullstack Developer
 
 <br />
 
