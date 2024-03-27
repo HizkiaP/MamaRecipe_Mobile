@@ -164,7 +164,7 @@ bash
 
 ## Authors
 
-💻 [Hizkia Panjaitan](https://drive.google.com/drive/folders/1jJlgpB8R-bI1-90syE67FQCFbxiGhC1F?usp=sharing) as Fullstack Developer
+💻 [Hizkia Panjaitan](https://github.com/HizkiaP) as Fullstack Developer
 
 <br />
 
