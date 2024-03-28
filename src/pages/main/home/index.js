@@ -7,19 +7,72 @@ import {
   TouchableHighlight,
   Image,
   ScrollView,
+  FlatList,
+  ActivityIndicator,
+  TouchableOpacity,
 } from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import React, {useEffect, useState} from 'react';
+import {API_KEY} from '@env';
+import axios from 'axios';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Home = ({navigation}) => {
+  const [recipe, setRecipe] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [params, setParams] = useState({
+    page: 1,
+    limit: 4,
+  });
+
+  const handleGetRecipe = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_KEY}/recipe`, {params});
+      console.log('GET RECIPE = ', response);
+      const {data} = response.data;
+      setIsLoading(false);
+      console.log(data);
+      setRecipe(current => [...current, ...data]);
+    } catch (error) {
+      setIsLoading(false);
+      console.log(error.response);
+    }
+  };
+
+  useEffect(() => {
+    handleGetRecipe();
+  }, []);
+
+  // useEffect(() => {
+  //   handleGetRecipe({page: params.page, limit: params.limit});
+  // }, [params]);
+
+  const renderLoader = () => {
+    return (
+      isLoading && (
+        <View>
+          <ActivityIndicator
+            size="small"
+            color="#0000ff"
+            style={styles.loader}
+          />
+        </View>
+      )
+    );
+  };
+
+  const loadMoreItem = () => {
+    setParams(current => ({...current, page: current.page + 1}));
+  };
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <TextInput
-          style={styles.search}
-          placeholder="Search Pasta, Bread, etc"
-        />
-      </View>
+      <TouchableOpacity onPress={() => navigation.navigate('Search')}>
+        <View style={styles.search}>
+          <AntDesign name="search1" size={23} color="#C4C4C4" />
+          <TextInput placeholder="Search Pasta, Bread, etc" />
+        </View>
+      </TouchableOpacity>
 
       {/* Popular Section */}
       <View>
@@ -58,48 +111,59 @@ const Home = ({navigation}) => {
       <View>
         <Text style={styles.txtNew}>New Recipes</Text>
       </View>
-      <View style={styles.wrapperImage2}>
-        <View>
-          <Image
-            style={styles.photo}
-            source={require('./../../../assets/toast-bread.jpg')}
-          />
-        </View>
-        <View>
+      <ScrollView style={styles.wrapperImage2} horizontal={true}>
+        {recipe.map((item, index) => (
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('DetailIngredients', {
+                recipe_id: item.recipe_id,
+              })
+            }
+            style={styles.wrapperToast}
+            key={index}>
+            {item.photo && (
+              <Image style={styles.photo} source={{uri: item.photo}} />
+            )}
+            <Text style={styles.toast}>{item.title}</Text>
+          </TouchableOpacity>
+        ))}
+        {/* <View style={styles.wrapperToast}>
           <Image
             style={styles.photo}
             source={require('./../../../assets/egg-sandwich.jpg')}
           />
+          <Text style={styles.toast}>Sandwich with Egg</Text>
         </View>
-        <View>
+        <View style={styles.wrapperToast}>
           <Image
             style={styles.photo}
             source={require('./../../../assets/beef-steak.jpg')}
           />
-        </View>
-      </View>
+          <Text style={styles.toast}>Sandwich with Egg</Text>
+        </View> */}
+      </ScrollView>
       {/* End New Recipes Section */}
 
       {/* Popular Recipes Section */}
       <View style={styles.wrapperText}>
-        <Text style={styles.txtRecipe}>Popular Recipes</Text>
+        <Text style={styles.txtRecipe}>All Recipes</Text>
         <Text style={styles.txtInfo}>More info</Text>
       </View>
       <View style={styles.wrapperRecipe}>
-        <View>
-          <Image source={require('./../../../assets/group43.png')} />
-        </View>
-        <View>
-          <Text>Teriyaki Salmon</Text>
-          <Text>spicy, salted</Text>
-          <View style={styles.wrapperRate}>
-            <Image source={require('./../../../assets/rate.png')} />
-            <Text>4.7</Text>
-          </View>
-        </View>
-      </View>
-
-      <View style={styles.wrapperRecipe}>
+        {/* <FlatList
+          data={recipe}
+          renderItem={({item}) => (
+            <View style={styles.wrapperToast}>
+              {item.photo && (
+                <Image style={styles.photo} source={{uri: item.photo}} />
+              )}
+              <Text style={styles.toast}>{item.title}</Text>
+            </View>
+          )}
+          keyExtractor={item => item.recipe_id}
+          ListFooterComponent={renderLoader}
+          onEndReached={loadMoreItem}
+        /> */}
         <View>
           <Image source={require('./../../../assets/group43.png')} />
         </View>
@@ -120,17 +184,26 @@ const Home = ({navigation}) => {
 export default Home;
 
 const styles = StyleSheet.create({
+  loader: {
+    marginTop: 65,
+  },
   container: {
     marginLeft: 25,
     marginRight: 25,
   },
+  // wrapperSearch: {
+  //   flexDirection: 'row',
+  // },
   search: {
     width: '100%',
     backgroundColor: '#ebe8e8',
     borderRadius: 14,
     marginTop: 40,
     marginBottom: 20,
-    paddingLeft: 30,
+    paddingLeft: 20,
+    paddingRight: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   txtPopular: {
     fontSize: 20,
@@ -167,6 +240,19 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 30,
     // justifyContent: 'space-between',
+  },
+  wrapperToast: {
+    position: 'relative',
+  },
+  toast: {
+    position: 'absolute',
+    color: '#FBFBFB',
+    left: '10%',
+    right: '10%',
+    bottom: '10%',
+    width: '70%',
+    fontSize: 16,
+    // textShadowColor: '2px 1.5px #000000',
   },
   photo: {
     borderRadius: 17,

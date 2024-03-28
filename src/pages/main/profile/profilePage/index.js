@@ -10,19 +10,49 @@ import React, {useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Link} from '@react-navigation/native';
 import {IcAward, IcBookmark, IcUser, IcThumb} from './../../../../assets/icons';
+import axios from 'axios';
+import {API_KEY} from '@env';
 
 const ProfilePage = ({navigation}) => {
-  const [token, setToken] = useState('');
+  // const [token, setToken] = useState('');
+  const [user, setUser] = useState([]);
 
-  const handleToken = async () => {
-    await AsyncStorage.getItem('token');
-    setToken(token);
+  // const handleToken = async () => {
+  //   const result = await AsyncStorage.getItem('token');
+  //   console.log('TOKEN = ', result);
+  //   // setToken(token);
+  // };
+
+  const handleGetByUserId = async () => {
+    try {
+      // handleToken();
+      const token = await AsyncStorage.getItem('token');
+      console.log('TOKEN = ', token);
+      const userId = await AsyncStorage.getItem('user_id');
+      console.log('USER ID = ', userId);
+      const response = await axios.get(`${API_KEY}/profile/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log('RESPONSE = ', response);
+      const result = response.data.data.rows[0];
+      console.log('RESULT = ', result);
+      console.log('INI DATA USER ID = ', result);
+      setUser(result);
+    } catch (error) {
+      console.log('ERROR = ', error.response);
+    }
   };
 
   useEffect(() => {
-    handleToken();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    handleGetByUserId();
   }, []);
+
+  // useEffect(() => {
+  //   handleToken();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     // <View>
@@ -33,8 +63,19 @@ const ProfilePage = ({navigation}) => {
     // </View>
     <SafeAreaView>
       <ImageBackground style={styles.background}>
-        <Image source={require('./../../../../assets/ellipse50.png')} />
-        <Text style={styles.txt1}>Mareta Lopeda</Text>
+        <View>
+          <View style={styles.wrapperPhotos}>
+            {user && user.image ? (
+              <Image style={styles.photo} source={{uri: user.image}} />
+            ) : (
+              <Image
+                source={require('../../../../assets/profile-avatar.png')}
+                style={styles.photo}
+              />
+            )}
+          </View>
+          <Text style={styles.txt1}>{user.username}</Text>
+        </View>
       </ImageBackground>
       <View style={styles.box}>
         <View style={styles.wrapperText}>
@@ -122,5 +163,13 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 16,
     marginBottom: 15,
+  },
+  wrapperPhotos: {
+    alignItems: 'center',
+  },
+  photo: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
   },
 });

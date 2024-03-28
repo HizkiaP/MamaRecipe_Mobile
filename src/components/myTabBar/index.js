@@ -37,14 +37,23 @@ function MyTabBar({state, descriptors, navigation}) {
         };
 
         const icon = () => {
-          if (label === 'Home') return <IcHome />;
-          if (label === 'Upload') return <IcPlus />;
-          if (label === 'Chat') return <IcMessage />;
-          if (label === 'Profile') return <IcUserBlack />;
+          if (label === 'Home') {
+            return <IcHome />;
+          }
+          if (label === 'Upload') {
+            return <IcPlus />;
+          }
+          // if (label === 'Chat') {
+          //   return <IcMessage />;
+          // }
+          if (label === 'Profile') {
+            return <IcUserBlack />;
+          }
         };
 
         return (
           <TouchableOpacity
+            key={index}
             accessibilityRole="button"
             accessibilityState={isFocused ? {selected: true} : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}

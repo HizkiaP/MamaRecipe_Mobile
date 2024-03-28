@@ -6,6 +6,7 @@ import {
   View,
   TouchableHighlight,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
 import axios from 'axios';
@@ -23,10 +24,19 @@ const Login = ({navigation}) => {
         email,
         password,
       });
+      console.log('RESPONSE = ', response);
+      // response.data.rows;
       const result = response.data.token;
-      console.log(result);
-      const {data} = response;
-      await AsyncStorage.setItem('token', data.token);
+      // console.log('RESULT = ', result);
+      const userId = response.data.data.rows[0].user_id;
+      // console.log('USER ID = ', userId);
+      // await AsyncStorage.setItem('token', data.token);
+      await AsyncStorage.setItem('token', result);
+      await AsyncStorage.setItem('user_id', userId.toString());
+      const user = await AsyncStorage.getItem('user_id');
+      console.log('LOCAL STORAGE USER ID = ', user);
+      const token = await AsyncStorage.getItem('token');
+      console.log('TOKEN = ', token);
       Alert.alert('Login Successful!', 'Login Successful!', [
         {
           text: 'Cancel',
@@ -37,7 +47,7 @@ const Login = ({navigation}) => {
       ]);
       navigation.navigate('MyTabs');
     } catch (error) {
-      console.log(error);
+      console.log('ERROR = ', error);
       Alert.alert('Login Failed!', 'Login Failed!', [
         {
           text: 'Cancel',
@@ -48,6 +58,7 @@ const Login = ({navigation}) => {
       ]);
     }
   };
+  // console.log(handleLogin);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -73,11 +84,11 @@ const Login = ({navigation}) => {
       <View style={styles.wrapperForgot}>
         <Text style={styles.forgot}>Forgot Password ?</Text>
       </View>
-      <TouchableHighlight style={styles.btn} onPress={handleLogin}>
+      <TouchableOpacity style={styles.btn} onPress={handleLogin}>
         <View>
           <Text style={styles.txt}>LOG IN</Text>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
       <View style={styles.wrapperEnd}>
         <Link to={{screen: 'Register'}}>
           <Text style={styles.txt2}>

@@ -1,11 +1,20 @@
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
-const LikedRecipe = () => {
+const LikedRecipe = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapperTitle}>
-        <Image source={require('./../../../../assets/group50.png')} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={require('./../../../../assets/group50.png')} />
+        </TouchableOpacity>
         <Text style={styles.title}>Liked Recipe</Text>
       </View>
       <View style={styles.wrapperRecipe}>

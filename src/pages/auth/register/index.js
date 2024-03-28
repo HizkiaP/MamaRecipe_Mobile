@@ -6,11 +6,19 @@ import {
   View,
   TouchableHighlight,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
 import axios from 'axios';
 import {Link} from '@react-navigation/native';
 import {API_KEY} from '@env';
+import {
+  IcUserBlack,
+  IcMail,
+  IcPhone,
+  IcLock,
+  IcUnlock,
+} from '../../../assets/icons';
 
 const Register = ({navigation}) => {
   const [username, setUsername] = useState('');
@@ -28,7 +36,8 @@ const Register = ({navigation}) => {
         password,
         confPassword,
       });
-      const result = response.data.data.rows;
+      console.log(response);
+      const result = response.data;
       console.log(result);
       Alert.alert('Register Successful!', 'Register Successful!', [
         {
@@ -61,12 +70,15 @@ const Register = ({navigation}) => {
         </Text>
       </View>
       <View>
-        <TextInput
-          style={styles.inputBtn}
-          placeholder="Name"
-          value={username}
-          onChangeText={setUsername}
-        />
+        <View>
+          {/* <IcUserBlack /> */}
+          <TextInput
+            style={styles.inputBtn}
+            placeholder="Name"
+            value={username}
+            onChangeText={setUsername}
+          />
+        </View>
         <TextInput
           style={styles.inputBtn}
           placeholder="E-mail"
@@ -94,11 +106,11 @@ const Register = ({navigation}) => {
           secureTextEntry={true}
         />
       </View>
-      <TouchableHighlight style={styles.btn} onPress={handleRegister}>
+      <TouchableOpacity style={styles.btn} onPress={handleRegister}>
         <View>
           <Text style={styles.txt}>CREATE</Text>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
       <View style={styles.wrapperEnd}>
         <Link to={{screen: 'Login'}}>
           <Text style={styles.txt2}>
@@ -120,8 +132,8 @@ const styles = StyleSheet.create({
   wrapperTitle: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 90,
-    marginBottom: 50,
+    marginTop: 40,
+    marginBottom: 20,
   },
   title1: {
     color: '#EFC81A',

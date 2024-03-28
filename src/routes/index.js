@@ -14,7 +14,10 @@ import SavedRecipe from '../pages/main/profile/savedRecipe';
 import LikedRecipe from '../pages/main/profile/likedRecipe';
 import DetailMenu from '../pages/main/detailMenu';
 import EditPage from '../pages/main/profile/edit';
-import {IcHome, IcPlus, IcMessage, IcUserBlack} from './../assets/icons/index';
+// import {IcHome, IcPlus, IcMessage, IcUserBlack} from './../assets/icons/index';
+import DetailIngredients from '../pages/main/detailIngredients';
+import Search from '../pages/main/search';
+import DetailVideo from '../pages/main/detailVideo';
 
 function MyTabs() {
   const Tab = createBottomTabNavigator();
@@ -34,11 +37,11 @@ function MyTabs() {
         component={Upload}
         options={{headerShown: false}}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Chat"
         component={Register}
         options={{headerShown: false}}
-      />
+      /> */}
       <Tab.Screen
         name="Profile"
         component={ProfilePage}
@@ -53,6 +56,26 @@ const MainRoute = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="MyTabs"
+          component={MyTabs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DetailIngredients"
+          component={DetailIngredients}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DetailVideo"
+          component={DetailVideo}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="EditPage"
           component={EditPage}
@@ -79,18 +102,13 @@ const MainRoute = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="MyTabs"
-          component={MyTabs}
+          name="Register"
+          component={Register}
           options={{headerShown: false}}
         />
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Register"
-          component={Register}
           options={{headerShown: false}}
         />
         <Stack.Screen

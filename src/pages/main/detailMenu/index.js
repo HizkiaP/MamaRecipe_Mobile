@@ -1,17 +1,30 @@
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
-const DetailMenu = () => {
+const DetailMenu = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapperTitle}>
-        <Image source={require('./../../../assets/group50.png')} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={require('./../../../assets/group50.png')} />
+        </TouchableOpacity>
         <Text style={styles.title}>Popular Menu</Text>
       </View>
       {/* 1 */}
       <View style={styles.wrapperRecipe}>
         <View>
-          <Image source={require('./../../../assets/rectangle10.png')} />
+          <TouchableHighlight
+            onPress={() => navigation.navigate('DetailIngredients')}>
+            <Image source={require('./../../../assets/rectangle10.png')} />
+          </TouchableHighlight>
         </View>
         <View style={styles.wrapperTxt}>
           <Text style={styles.txt1}>Margherita</Text>

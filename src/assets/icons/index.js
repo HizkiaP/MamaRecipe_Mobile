@@ -6,6 +6,10 @@ import IcAward from './award.svg';
 import IcUser from './user.svg';
 import IcBookmark from './bookmark.svg';
 import IcThumb from './thumbs-up.svg';
+import IcMail from './mail.svg';
+import IcPhone from './phone.svg';
+import IcLock from './lock.svg';
+import IcUnlock from './unlock.svg';
 
 export {
   IcHome,
@@ -16,4 +20,8 @@ export {
   IcUser,
   IcBookmark,
   IcThumb,
+  IcMail,
+  IcPhone,
+  IcLock,
+  IcUnlock,
 };
